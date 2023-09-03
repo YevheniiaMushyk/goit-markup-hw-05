@@ -24,6 +24,9 @@ a:link {
 ul {
     list-style-type: none;
 }
+button {
+    cursor: pointer;
+}
 
 /* main parameters for wrapper */
 body {
@@ -172,7 +175,7 @@ a.nav-menu:focus {
 }
 
 .button {
-    cursor: pointer;
+    /* cursor: pointer; */
     color: var(--white);
     /* Button Text */
     font-weight: 500;
@@ -470,6 +473,7 @@ a.nav-menu:focus {
 }
 
 .footer-social_text {
+    display: block;
     color: var(--white);
     font-weight: 500;
     font-size: 16px;
@@ -479,7 +483,8 @@ a.nav-menu:focus {
 }
 
 .footer-social_link {
-    max-width: 208px;
+    flex: 0 1 208px;
+    margin-right: 80px;
 }
 
 .social_icons {
@@ -527,4 +532,54 @@ a.nav-menu:focus {
     left: 50%;
     fill: var(--cloud);
     transform: translate(-50%, -50%);
+}
+
+.footer-form {
+    display: flex;
+    background-color: var(--navyblue);
+}
+
+.footer-label {
+    display: block;
+    width: 264px;
+    /* height: 40px; */
+    border-radius: 4px;
+    border: 1px solid var(--white);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    padding: 8px 16px;
+    margin-right: 24px;
+}
+
+.footer-placeholder {
+    width: 100%;
+    color: var(--white);
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 2; /* 200% */
+    letter-spacing: 0.48px;
+    background-color: var(--navyblue);
+}
+
+.footer_subscr {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-radius: 4px;
+    background: var(--iris);
+    padding: 8px 24px;
+}
+
+.footer_button_text {
+    display: block;
+    text-align: center;
+    color: var(--white);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.64px;
+}
+
+.footer_button_svg {
 }
