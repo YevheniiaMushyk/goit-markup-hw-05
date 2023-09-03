@@ -51,33 +51,51 @@
                     <h1 class="title-main">Effective Solutions for Your Business</h1>
                     <button class="button" type="button">Order Service</button>
                 </div>
-                <form action="/index.html" method="post">
-                    <button type="button">svg</button>
-                    <fieldset>
-                        <legend>Leave your contacts and we will call you back</legend>
-                        <label>
-                            Name
-                            <input type="text" name="name" autofocus />
-                        </label>
-                        <label>
-                            Phone
-                            <input type="tel" name="phone" />
-                        </label>
-                        <label>
-                            Email
-                            <input type="email" name="email" />
-                        </label>
-                        <label>
-                            Comment
-                            <textarea name="comment" rows="5" placeholder="Text input"></textarea>
-                        </label>
-                        <label>
-                            <input type="checkbox" name="accept" value="accept" />
-                            I accept the terms and conditions of the <a href="#" target="_blank">Privacy Policy</a>
-                        </label>
-                    </fieldset>
-                    <button type="submit">Send</button>
-                </form>
+                <dialog class="is_open">
+                    <button class="close_modal" type="button">
+                        <svg class="close_button" width="8" height="8">
+                            <use href="./images/icons.svg#icon-close"></use>
+                        </svg>
+                    </button>
+                    <form action="/index.html" method="post">
+                        <fieldset>
+                            <legend>Leave your contacts and we will call you back</legend>
+                            <label>
+                                Name
+                                <input type="text" name="name" autofocus />
+                            </label>
+                            <label>
+                                Phone
+                                <input type="tel" name="phone" />
+                            </label>
+                            <label>
+                                Email
+                                <input type="email" name="email" />
+                            </label>
+                            <label>
+                                Comment
+                                <textarea name="comment" rows="5" placeholder="Text input"></textarea>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="accept" value="accept" />
+                                I accept the terms and conditions of the <a href="#" target="_blank">Privacy Policy</a>
+                            </label>
+                        </fieldset>
+                        <button type="submit">Send</button>
+                    </form>
+                </dialog>
+                <script>
+                    const is_open = document.querySelector('.is_open');
+                    const button = document.querySelector('.button');
+                    const close_modal = document.querySelector('.close_modal');
+
+                    button.addEventListener('click', () => {
+                        is_open.showModal();
+                    });
+                    close_modal.addEventListener('click', () => {
+                        is_open.close();
+                    });
+                </script>
             </section>
 
             <section class="section-vh">
