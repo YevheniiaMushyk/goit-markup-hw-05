@@ -51,33 +51,33 @@
                     <h1 class="title-main">Effective Solutions for Your Business</h1>
                     <button class="button" type="button">Order Service</button>
                 </div>
-                <dialog class="is_open">
+                <dialog class="is_open container_modal">
                     <button class="close_modal" type="button">
                         <svg class="close_button" width="8" height="8">
                             <use href="./images/icons.svg#icon-close"></use>
                         </svg>
                     </button>
-                    <form action="/index.html" method="post">
+                    <form action="/index.html" method="post" class="modal_form">
                         <fieldset>
-                            <legend>Leave your contacts and we will call you back</legend>
-                            <label>
-                                Name
-                                <input type="text" name="name" autofocus />
+                            <legend class="modal_title">Leave your contacts and we will call you back</legend>
+                            <label class="modal_label">
+                                Name <br />
+                                <input class="modal_input" type="text" name="name" />
                             </label>
-                            <label>
+                            <label class="modal_label">
                                 Phone
-                                <input type="tel" name="phone" />
+                                <input class="modal_input" type="tel" name="phone" />
                             </label>
-                            <label>
+                            <label class="modal_label">
                                 Email
-                                <input type="email" name="email" />
+                                <input class="modal_input" type="email" name="email" />
                             </label>
-                            <label>
+                            <label class="modal_label">
                                 Comment
                                 <textarea name="comment" rows="5" placeholder="Text input"></textarea>
                             </label>
-                            <label>
-                                <input type="checkbox" name="accept" value="accept" />
+                            <label class="modal_label">
+                                <input class="modal_input" type="checkbox" name="accept" value="accept" />
                                 I accept the terms and conditions of the <a href="#" target="_blank">Privacy Policy</a>
                             </label>
                         </fieldset>
