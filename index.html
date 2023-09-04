@@ -62,7 +62,7 @@
                             <legend class="modal_title">Leave your contacts and we will call you back</legend>
                             <label class="modal_label">
                                 Name <br />
-                                <input class="modal_input" type="text" name="name" />
+                                <input class="modal_input" type="text" name="name" autofocus />
                             </label>
                             <label class="modal_label">
                                 Phone
@@ -74,14 +74,14 @@
                             </label>
                             <label class="modal_label">
                                 Comment
-                                <textarea name="comment" rows="5" placeholder="Text input"></textarea>
+                                <textarea class="modal_ta" name="comment" rows="5" placeholder="Text input"></textarea>
                             </label>
                             <label class="modal_label">
-                                <input class="modal_input" type="checkbox" name="accept" value="accept" />
+                                <input class="modal_chb" type="checkbox" name="accept" value="accept" />
                                 I accept the terms and conditions of the <a href="#" target="_blank">Privacy Policy</a>
                             </label>
                         </fieldset>
-                        <button type="submit">Send</button>
+                        <button class="send_buttom" type="submit">Send</button>
                     </form>
                 </dialog>
                 <script>
