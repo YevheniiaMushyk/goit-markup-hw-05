@@ -362,10 +362,23 @@ a.nav-menu:focus {
     border: 1px solid var(--navyblue_modal);
 }
 .name {
-    background-image: url('
-        data:image/svg+xml;utf8,<svg width='8'  height='8'><use href="../images/icons.svg#icon-person_for_name"></use></svg>');
-    /* no-repeat 16px 11px */
-    background-color: var(--hovericon);
+    background-image: url('../images/name.svg');
+    background-repeat: no-repeat;
+    background-position: 16px 8px;
+    fill: var(--navyblue);
+}
+
+.phone {
+    background-image: url('../images/phone.svg');
+    background-repeat: no-repeat;
+    background-position: 16px 8px;
+    fill: var(--navyblue);
+}
+
+.email {
+    background-image: url('../images/email.svg');
+    background-repeat: no-repeat;
+    background-position: 16px 8px;
     fill: var(--navyblue);
 }
 
