@@ -325,13 +325,15 @@ a.nav-menu:focus {
 }
 
 .modal_form {
-    display: block;
-    display: flex;
-    flex-direction: column;
 }
 
-.main-title {
-    display: block;
+.modal_fs {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.modal_title {
     color: var(--navyblue);
     text-align: center;
     font-family: Roboto;
@@ -340,11 +342,12 @@ a.nav-menu:focus {
     font-weight: 500;
     line-height: 1.5; /* 150% */
     letter-spacing: 0.32px;
+    width: 100%;
     margin: 0 auto;
 }
 
 .modal_label {
-    display: inline-block;
+    display: block;
     color: var(--lightslate);
     font-family: Roboto;
     font-size: 12px;
@@ -353,41 +356,60 @@ a.nav-menu:focus {
     letter-spacing: 0.48px;
 }
 
+.name,
+.phone,
+.email {
+    position: relative;
+}
+
 .modal_input {
     display: block;
-    width: 360px;
+    width: 100%;
     height: 40px;
     padding: 0 0 0 38px;
     border-radius: 4px;
     border: 1px solid var(--navyblue_modal);
 }
-.name {
-    background-image: url('../images/name.svg');
-    background-repeat: no-repeat;
-    background-position: 16px 8px;
-    fill: var(--navyblue);
-}
 
-.phone {
-    background-image: url('../images/phone.svg');
-    background-repeat: no-repeat;
-    background-position: 16px 8px;
-    fill: var(--navyblue);
-}
-
-.email {
-    background-image: url('../images/email.svg');
-    background-repeat: no-repeat;
-    background-position: 16px 8px;
-    fill: var(--navyblue);
+.modal_icon {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    left: 0;
+    bottom: 0;
+    /* max-height: 18px;
+    bottom: 11px;
+    left: 16px; */
 }
 
 .modal_input:active,
 .modal_input:hover,
 .modal_input:focus {
     border: 1px solid var(--iris);
+}
+
+.icon_name,
+.icon_phone,
+.icon_email {
+    fill: var(--navyblue);
+}
+.modal_icon:active,
+.modal_icon:hover,
+.modal_icon:focus {
     fill: var(--iris);
 }
+
+/* .icon_name:active,
+.icon_name:hover,
+.icon_name:focus,
+.icon_phone:active,
+.icon_phone:hover,
+.icon_phone:focus,
+.icon_email:active,
+.icon_email:hover,
+.icon_email:focus {
+    fill: var(--iris);
+} */
 
 .modal_ta {
     width: 360px;
