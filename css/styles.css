@@ -44,6 +44,13 @@ input:focus {
     outline-offset: 0;
 }
 
+textarea:active,
+textarea:hover,
+textarea:focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
 /* main parameters for wrapper */
 body {
     font-family: Roboto, sans-serif;
@@ -307,12 +314,20 @@ a.nav-menu:focus {
 
 .close_modal {
     position: relative;
-
     width: 24px;
     height: 24px;
     background-color: var(--cornflower);
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 24px 24px 24px 336px;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close_modal:hover,
+.close_modal:focus {
+    background-color: var(--ocean);
 }
 
 .close_button {
@@ -322,6 +337,15 @@ a.nav-menu:focus {
     left: 50%;
     transform: translate(-50%, -50%);
     margin: 0 0 0 auto;
+    transition-property: background-color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close_button:hover,
+.close_button:focus {
+    background-color: var(--ocean);
+    fill: var(--white);
 }
 
 .modal_form {
@@ -344,6 +368,7 @@ a.nav-menu:focus {
     letter-spacing: 0.32px;
     width: 100%;
     margin: 0 auto;
+    margin-bottom: 16px;
 }
 
 .modal_label {
@@ -391,31 +416,47 @@ a.nav-menu:focus {
 .icon_name,
 .icon_phone,
 .icon_email {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translate(-50%, -50%);
     fill: var(--navyblue);
 }
-.modal_icon:active,
-.modal_icon:hover,
-.modal_icon:focus {
+
+.modal_icon:active svg.icon_name,
+.modal_icon:hover svg.icon_name,
+.modal_icon:focus svg.icon_name {
     fill: var(--iris);
 }
 
-/* .icon_name:active,
-.icon_name:hover,
-.icon_name:focus,
-.icon_phone:active,
-.icon_phone:hover,
-.icon_phone:focus,
-.icon_email:active,
-.icon_email:hover,
-.icon_email:focus {
+.modal_icon:active svg.icon_phone,
+.modal_icon:hover svg.icon_phone,
+.modal_icon:focus svg.icon_phone {
     fill: var(--iris);
-} */
+}
+
+.modal_icon:active svg.icon_email,
+.modal_icon:hover svg.icon_email,
+.modal_icon:focus svg.icon_email {
+    fill: var(--iris);
+}
 
 .modal_ta {
+    display: block;
+    color: var(--navyblue_modal);
+    padding-top: 8px;
+    padding-left: 16px;
     width: 360px;
     height: 120px;
     border-radius: 4px;
     border: 1px solid var(--navyblue_modal);
+    resize: none;
+}
+
+.modal_label:active + textarea.modal_ta:active,
+.modal_label:hover + textarea.modal_ta:hover,
+.modal_label:focus + textarea.modal_ta:focus {
+    border: 1px solid var(var(--iris));
 }
 
 .send_buttom {
