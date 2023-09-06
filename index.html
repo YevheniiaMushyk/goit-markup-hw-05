@@ -51,94 +51,11 @@
                     <h1 class="title-main">Effective Solutions for Your Business</h1>
                     <button class="button" type="button">Order Service</button>
                 </div>
-                <dialog class="is_open container_modal">
-                    <button class="close_modal" type="button">
-                        <svg class="close_button" width="8" height="8">
-                            <use href="./images/icons.svg#icon-close"></use>
-                        </svg>
-                    </button>
-                    <form action="/index.html" method="post" class="modal_form">
-                        <fieldset class="modal_fs">
-                            <legend class="modal_title">Leave your contacts and we will call you back</legend>
-                            <label class="modal_label name">
-                                Name<br />
-                                <input
-                                    type="text"
-                                    name="name"
-                                    class="modal_input"
-                                    autocomplete="on"
-                                    autofocus="required"
-                                    placeholder="Mark Guerrero"
-                                />
-                                <div class="modal_icon">
-                                    <svg class="icon_name" width="18" height="18">
-                                        <use href="./images/icons.svg#icon-person_for_name"></use>
-                                    </svg>
-                                </div>
-                            </label>
-                            <label class="modal_label phone">
-                                Phone<br />
-                                <input
-                                    class="modal_input"
-                                    type="tel"
-                                    name="phone"
-                                    autocomplete="on"
-                                    required
-                                    placeholder="+11 (000) 111-11-11"
-                                />
-                                <div class="modal_icon">
-                                    <svg class="icon_phone" width="18" height="24">
-                                        <use href="./images/icons.svg#icon-phone_for_phone"></use>
-                                    </svg>
-                                </div>
-                            </label>
-                            <label class="modal_label email">
-                                Email<br />
-                                <input
-                                    class="modal_input"
-                                    type="email"
-                                    name="email"
-                                    autocomplete="on"
-                                    required
-                                    autocomplete="on"
-                                    required
-                                    placeholder="info@devstudio.com"
-                                />
-                                <div class="modal_icon">
-                                    <svg class="icon_email" width="18" height="24">
-                                        <use href="./images/icons.svg#icon-email"></use>
-                                    </svg>
-                                </div>
-                            </label>
-                            <label class="modal_label">
-                                Comment<br />
-                                <textarea class="modal_ta" name="comment" rows="5" placeholder="Text input"></textarea>
-                            </label>
-                            <label class="modal_label">
-                                <input class="modal_chb" type="checkbox" name="accept" value="accept" />
-                                I accept the terms and conditions of the <a href="#" target="_blank">Privacy Policy</a>
-                            </label>
-                        </fieldset>
-                        <button class="send_buttom" type="submit">Send</button>
-                    </form>
-                </dialog>
-                <script>
-                    const is_open = document.querySelector('.is_open');
-                    const button = document.querySelector('.button');
-                    const close_modal = document.querySelector('.close_modal');
-
-                    button.addEventListener('click', () => {
-                        is_open.showModal();
-                    });
-                    close_modal.addEventListener('click', () => {
-                        is_open.close();
-                    });
-                </script>
             </section>
 
             <section class="section-vh">
                 <div class="container">
-                    <h2 class="visually-hidden">H2</h2>
+                    <h2 class="visually-hidden_title">H2</h2>
                     <ul class="section-vh_list">
                         <li class="section-vh_list_item">
                             <div class="section-vh_img">
@@ -449,7 +366,7 @@
                     </p>
                 </div>
                 <div class="footer-social_link">
-                    <p class="footer-social_text">Social media</p>
+                    <p class="footer-social_text footer-social_text_margin">Social media</p>
                     <ul class="social_icons">
                         <li class="social_icons_item">
                             <a class="social_icons_link" href="https://www.instagram.com/" target="_blank">
@@ -481,13 +398,13 @@
                         </li>
                     </ul>
                 </div>
-                <div>
+                <div class="footer-flex">
                     <p class="footer-social_text">Subscribe</p>
                     <form class="footer-form" action="/index.html" method="get">
                         <label class="footer-label">
-                            <input class="footer-placeholder" type="email" name="add_email" placeholder="E-mail" />
+                            <input class="footer-placeholder" type="email" name="add-email" placeholder="E-mail" />
                         </label>
-                        <button class="footer_subscr">
+                        <button class="footer_subscr" type="submit">
                             <span class="footer_button_text">Subscribe</span>
                             <svg class="footer_button_svg" width="24" height="24">
                                 <use href="./images/icons.svg#icon-plane"></use>
@@ -497,5 +414,115 @@
                 </div>
             </div>
         </footer>
+
+        <div class="modal_win">
+            <div class="is_open container_modal">
+                <button class="close_modal" type="button">
+                    <svg class="close_button" width="8" height="8">
+                        <use href="./images/icons.svg#icon-close"></use>
+                    </svg>
+                </button>
+                <p class="modal_title">Leave your contacts and we will call you back</p>
+                <form action="/index.html" method="post">
+                    <div class="modal_fs">
+                        <label class="modal_label" for="user-name">Name</label>
+                        <div class="modal_data">
+                            <input
+                                id="user-name"
+                                type="text"
+                                name="user-name"
+                                class="modal_input"
+                                autocomplete="on"
+                                autofocus
+                                placeholder="Mark Guerrero"
+                            />
+
+                            <svg class="modal_icon" width="18" height="24">
+                                <use href="./images/icons.svg#icon-person_for_name"></use>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="modal_fs">
+                        <label class="modal_label" for="user-phone">Phone</label>
+                        <div class="modal_data">
+                            <input
+                                id="user-phone"
+                                type="tel"
+                                name="user-phone"
+                                class="modal_input"
+                                autocomplete="on"
+                                placeholder="+11 (000) 111-11-11"
+                            />
+
+                            <svg class="modal_icon" width="18" height="24">
+                                <use href="./images/icons.svg#icon-phone_for_phone"></use>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="modal_fs">
+                        <label class="modal_label" for="user-email">Email</label>
+                        <div class="modal_data">
+                            <input
+                                id="user-email"
+                                type="email"
+                                name="user-email"
+                                class="modal_input"
+                                autocomplete="on"
+                                placeholder="info@devstudio.com"
+                            />
+
+                            <svg class="modal_icon" width="18" height="24">
+                                <use href="./images/icons.svg#icon-email"></use>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="modal_comment">
+                        <label class="modal_label" for="user-comment">Comment</label>
+                        <textarea
+                            id="user-comment"
+                            name="user-comment"
+                            placeholder="Text input"
+                            class="modal_ta"
+                        ></textarea>
+                    </div>
+
+                    <div class="modal_chb">
+                        <input
+                            id="user-privacy"
+                            type="checkbox"
+                            name="user-privacy"
+                            value="true"
+                            class="visually-hidden"
+                        />
+                        <label class="modal_chblabel" for="user-privacy">
+                            <span class="modal_chbicon">
+                                <svg class="modal_chbicon_svg" width="10" height="8">
+                                    <use href="./images/icons.svg#icon-checkbox"></use>
+                                </svg>
+                            </span>
+                            I accept the terms and conditions of the
+                            <a href="#" target="_blank" class="modal_link">Privacy Policy</a>
+                        </label>
+                    </div>
+
+                    <button class="send_buttom" type="submit">Send</button>
+                </form>
+            </div>
+            <!-- <script>
+                const modal_win = document.querySelector('.modal_win');
+                const button = document.querySelector('.button');
+                const close_modal = document.querySelector('.close_modal');
+
+                button.addEventListener('click', () => {
+                    modal_win.showModal();
+                });
+                close_modal.addEventListener('click', () => {
+                    modal_win.close();
+                });
+            </script> -->
+        </div>
     </body>
 </html>
