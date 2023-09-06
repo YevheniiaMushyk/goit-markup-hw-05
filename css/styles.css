@@ -501,9 +501,6 @@ a.nav-menu:focus {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-}
-
-.footer-social_text_margin {
     margin-bottom: 16px;
 }
 
@@ -562,7 +559,6 @@ a.nav-menu:focus {
 .footer-flex {
     display: flex;
     flex-direction: column;
-    gap: 16px;
 }
 
 .footer-form {
@@ -573,22 +569,22 @@ a.nav-menu:focus {
 
 .footer-label {
     display: inline-block;
-    width: 264px;
-    height: 40px;
-    border-radius: 4px;
-    border: 1px solid var(--white);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    padding: 8px 16px;
 }
 
 .footer-placeholder {
     color: var(--white);
+    width: 264px;
+    height: 40px;
+    border: 1px solid var(--white);
+    border-radius: 4px;
     font-family: Roboto;
     font-size: 12px;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.04em;
     background-color: transparent;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    padding-left: 16px;
 }
 
 .footer_subscr {
@@ -600,16 +596,15 @@ a.nav-menu:focus {
     border: none;
     border-radius: 4px;
     background: var(--iris);
+    color: var(--white);
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
 }
 
 .footer_button_text {
     display: block;
     text-align: center;
-    color: var(--white);
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
 }
 
 .footer_button_svg {
@@ -633,17 +628,15 @@ a.nav-menu:focus {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    border-radius: 4px;
-    background: var(--dairy);
-}
-
-.container_modal {
     width: 408px;
     min-height: 584px;
     background: var(--dairy);
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.container_modal {
     padding: 72px 24px 24px 24px;
 }
 
@@ -764,8 +757,9 @@ a.nav-menu:focus {
     resize: none;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.modal_ta:hover {
+.modal_ta:active,
+.modal_ta:hover,
+.modal_ta:focus {
     border-color: var(--iris);
 }
 
@@ -776,13 +770,11 @@ a.nav-menu:focus {
 
 .visually-hidden {
     position: absolute;
-    z-index: -1;
+
     width: 16px;
     height: 16px;
     top: 5px;
     left: 0;
-    border: 0;
-    padding: 0;
     opacity: 0;
 }
 
@@ -799,14 +791,24 @@ a.nav-menu:focus {
     justify-content: center;
     width: 16px;
     height: 16px;
+    position: relative;
+    top: 4px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
     fill: transparent;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: background-color, border, fill, z-index;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.visually-hidden:checked + .modal_chbicon {
+.modal_chbicon_svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+input.visually-hidden:checked + label.modal_chblabel span.modal_chbicon {
     background-color: var(--ocean);
     border: none;
     fill: var(--cloud);
