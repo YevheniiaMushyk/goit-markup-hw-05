@@ -602,11 +602,6 @@ a.nav-menu:focus {
     letter-spacing: 0.04em;
 }
 
-.footer_button_text {
-    display: block;
-    text-align: center;
-}
-
 .footer_button_svg {
     margin-left: 16px;
 }
@@ -796,7 +791,7 @@ a.nav-menu:focus {
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
     fill: transparent;
-    transition-property: background-color, border, fill, z-index;
+    transition-property: background-color, border, fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
