@@ -616,7 +616,11 @@ a.nav-menu:focus {
 }
 
 /* MODAL WINDOW */
-.modal_win {
+.modal_hidden {
+    display: none;
+}
+
+.is_open {
     position: fixed;
     z-index: 999;
     top: 0;
@@ -627,7 +631,7 @@ a.nav-menu:focus {
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.is_open {
+.modal_win {
     position: absolute;
     top: 50%;
     left: 50%;
