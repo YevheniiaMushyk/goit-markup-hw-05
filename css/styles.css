@@ -616,20 +616,19 @@ a.nav-menu:focus {
 }
 
 /* MODAL WINDOW */
-.modal_hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+.backdrop {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 .is_open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.modal_area {
     position: fixed;
     z-index: 999;
     top: 0;
