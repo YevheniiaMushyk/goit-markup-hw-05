@@ -617,7 +617,6 @@ a.nav-menu:focus {
 
 /* MODAL WINDOW */
 .modal_hidden {
-    /* display: none; */
     position: absolute;
     width: 1px;
     height: 1px;
